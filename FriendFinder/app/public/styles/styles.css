@@ -1,0 +1,23 @@
+* {
+  padding: 4px;
+}
+
+img {
+  height: 60px;
+}
+
+#jumbotron {
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #d5552d;
+}
+
+#surveyButton {
+  background-color: #d5552d;
+  color: black;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px #d5552d;
+}
+
+#surveyButton:hover {
+  background-color: grey;
+}
