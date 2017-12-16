@@ -18,9 +18,20 @@ var qList = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10];
 
 var questionId = 0;
 
+//function to load questions from array
 function surveyLoad() {
   for (var i = 0; i < qList.length; i++) {
     questionId++;
     $("#surveyDiv").append("<div class='form-group'> <label for = 'exampleFormControlSelect1'><p> Question " + questionId + ": </p></label><p class = 'question-text'>" + qList[i] + "</p> <select class = 'form-control q' id = 'q1' ><option> 1 Nope! </option> <option> 2 </option> <option> 3 More or Less </option> <option> 4 </option> <option> 5 To the max! </option></select ></div>");
   } //end loop
 } //end surveyLoad
+
+var name;
+var pic;
+
+$("#submit").on("click", function() {
+
+  name = $("#name-input").val();
+  pic = $("#img-input").val();
+  console.log(name);
+});
