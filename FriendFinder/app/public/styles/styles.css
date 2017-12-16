@@ -1,5 +1,5 @@
 * {
-  padding: 4px;
+  padding: 5px;
 }
 
 img {
@@ -20,4 +20,25 @@ img {
 
 #surveyButton:hover {
   background-color: grey;
+}
+
+.question-text {
+  font-size: 30px;
+}
+
+.q {
+  width: 300px;
+}
+
+.form-group {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#submit {
+  border: 1px solid black;
+}
+
+#submit:hover {
+  background-color: red;
 }
