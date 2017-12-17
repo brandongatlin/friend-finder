@@ -13,8 +13,8 @@ var PORT = 3000;
 
 app.use('/static', express.static(__dirname + '/static'));
 
-app.listen(PORT, function() {
-  console.log("listening on port 3000");
+app.listen(process.env.port || PORT, function() {
+  console.log("listening on port: " + PORT);
 });
 
 app.get("/", function(req, res) {
