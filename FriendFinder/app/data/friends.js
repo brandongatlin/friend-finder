@@ -31,7 +31,10 @@ var pic;
 
 $("#submit").on("click", function() {
 
-  name = $("#name-input").val();
-  pic = $("#img-input").val();
-  console.log(name);
-});
+  var newUser = {
+    name: $("#name-input").val().trim(),
+    pic: $("#img-input").val()
+
+  };
+  console.log(newUser);
+}); //end submit button on click event
