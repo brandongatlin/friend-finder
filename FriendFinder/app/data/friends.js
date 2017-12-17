@@ -37,5 +37,4 @@ $("#submit").on("click", function() {
 
   };
   console.log(newUser);
-  console.log(name);
 }); //end submit button on click event
