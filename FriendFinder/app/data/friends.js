@@ -33,8 +33,9 @@ $("#submit").on("click", function() {
 
   var newUser = {
     name: $("#name-input").val().trim(),
-    pic: $("#img-input").val()
+    // pic: $("#img-input").val()
 
   };
   console.log(newUser);
+  console.log(name);
 }); //end submit button on click event
