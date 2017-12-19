@@ -52,9 +52,14 @@ $("#submit").on("click", function() {
   };
 
   console.log(newUser);
+  console.log(peeps);
+
+  //push new user data to array of users
   peeps.push(newUser);
 
-  console.log(peeps);
+  $("#name-input").val("");
+  $("#img-input").val("");
+  $(".q").val("");
 
   $.post("/api/friends", newUser, function(data) {});
 
