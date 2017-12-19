@@ -18,8 +18,8 @@
 
     <div id="input-div">
       <div class="input-group">
-        <span class="input-group-addon" id="name-input">Name</span>
-        <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
+        <span class="input-group-addon">Name</span>
+        <input type="text" class="form-control" id="name-input" placeholder="Name" aria-label="Name" aria-describedby="basic-addon1">
       </div>
 
       <form>
@@ -30,7 +30,6 @@
       </form>
     </div>
 
-
     <div id="surveyDiv">
     </div>
     <div id="surveyDiv">
@@ -39,6 +38,7 @@
     <div id="submit-div">
       <button type="submit" class="btn btn-default" id="submit">Submit</button>
     </div>
+    <a href="/api/friends">api/friends</a>
 
   </div>
 
@@ -46,7 +46,6 @@
 
   <script>
     $(document).ready(function() {
-      console.log("3!");
       surveyLoad();
     });
 
@@ -70,41 +69,47 @@
       for (var i = 0; i < qList.length; i++) {
         questionId++;
         $("#surveyDiv").append("<div class='form-group'> <label for = 'exampleFormControlSelect1'><p> Question " + questionId + ": </p></label><p class = 'question-text'>" + qList[i] +
-          "</p> <select class = 'form-control q' id = 'q1' ><option> 1 Nope! </option> <option> 2 </option> <option> 3 More or Less </option> <option> 4 </option> <option> 5 To the max! </option></select ></div>");
+          "</p> <select class = 'form-control q' id =" + "q" + questionId + "><option> 1 Nope! </option> <option> 2 </option> <option> 3 More or Less </option> <option> 4 </option> <option> 5 To the max! </option></select ></div>");
       } //end loop
     } //end surveyLoad
 
-    var name;
-    var pic;
+    // var name;
+    // var pic;
+
+    var newUser;
 
     $("#submit").on("click", function() {
+      event.preventDefault();
 
-      var newUser = {
+
+      newUser = {
         name: $("#name-input").val().trim(),
-        // pic: $("#img-input").val()
-
+        pic: $("#img-input").val(),
+        scores: [
+          $("#q1").val(),
+          $("#q2").val(),
+          $("#q3").val(),
+          $("#q4").val(),
+          $("#q5").val(),
+          $("#q6").val(),
+          $("#q7").val(),
+          $("#q8").val(),
+          $("#q9").val(),
+          $("#q10").val()
+        ]
       };
 
-      //object ex.
-      // var userData = {
-      //           name: $("#name").val(),
-      //           photo: $("#photo").val(),
-      //           scores: [
-      //             $("#q1").val(),
-      //             $("#q2").val(),
-      //             $("#q3").val(),
-      //             $("#q4").val(),
-      //             $("#q5").val(),
-      //             $("#q6").val(),
-      //             $("#q7").val(),
-      //             $("#q8").val(),
-      //             $("#q9").val(),
-      //             $("#q10").val()
-      //           ]
-      //         };
       console.log(newUser);
+      $(peeps).push(newUser);
+      console.log(peeps);
+
+      // module.exports = newUser;
+      $.post("/api/friends", newUser, function(data) {
+        console.log("new friend posted!");
+      })
     }); //end submit button on click event
   </script>
+
   <script src="../data/friends.js"></script>
 
 </body>
