@@ -2,7 +2,7 @@
 
 var peeps = [{
     "name": "Fry",
-    "photo": "https://www.wired.com/images_blogs/underwire/2010/06/fry_660.jpg",
+    "pic": "https://www.wired.com/images_blogs/underwire/2010/06/fry_660.jpg",
     "scores": [
       1,
       2,
@@ -19,7 +19,7 @@ var peeps = [{
 
   {
     "name": "Lela",
-    "photo": "http://www.behindthevoiceactors.com/_img/chars/turanga-leela-futurama-92.5.jpg",
+    "pic": "http://www.behindthevoiceactors.com/_img/chars/turanga-leela-futurama-92.5.jpg",
     "scores": [
       5,
       2,
@@ -36,7 +36,7 @@ var peeps = [{
 
   {
     "name": "Zoidberg",
-    "photo": "https://upload.wikimedia.org/wikipedia/en/4/4a/Dr_John_Zoidberg.png",
+    "pic": "https://upload.wikimedia.org/wikipedia/en/4/4a/Dr_John_Zoidberg.png",
     "scores": [
       5,
       5,
@@ -53,7 +53,7 @@ var peeps = [{
 
   {
     "name": "Bender",
-    "photo": "https://vignette.wikia.nocookie.net/himym/images/5/51/Bender.jpg/revision/latest?cb=20130506083200",
+    "pic": "https://vignette.wikia.nocookie.net/himym/images/5/51/Bender.jpg/revision/latest?cb=20130506083200",
     "scores": [
       5,
       5,
@@ -70,7 +70,7 @@ var peeps = [{
 
   {
     "name": "Amy",
-    "photo": "http://www.behindthevoiceactors.com/_img/chars/amy-wong-futurama-64.8.jpg",
+    "pic": "http://www.behindthevoiceactors.com/_img/chars/amy-wong-futurama-64.8.jpg",
     "scores": [
       1,
       2,

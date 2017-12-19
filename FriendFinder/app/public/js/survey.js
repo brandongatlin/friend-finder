@@ -35,9 +35,9 @@ $("#submit").on("click", function() {
   event.preventDefault();
 
   newUser = {
-    name: $("#name-input").val().trim(),
-    pic: $("#img-input").val(),
-    scores: [
+    "name": $("#name-input").val().trim(),
+    "pic": $("#img-input").val(),
+    "scores": [
       $("#q1").val(),
       $("#q2").val(),
       $("#q3").val(),
@@ -52,7 +52,8 @@ $("#submit").on("click", function() {
   };
 
   console.log(newUser);
-  $(peeps).push(newUser);
+  peeps.push(newUser);
+
   console.log(peeps);
 
   $.post("/api/friends", newUser, function(data) {});
