@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/app'));
 
 //
 require("./app/routing/htmlRoutes.js")(app);
-//require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
 
 
 app.listen(process.env.port || PORT, function() {
