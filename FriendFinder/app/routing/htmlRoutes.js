@@ -1,12 +1,19 @@
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname + '/app/public/home.html'));
-});
+var path = require("path");
 
-app.get("/survey.html", function(req, res) {
-  res.sendFile(path.join(__dirname + '/app/public/survey.html'));
-  // res.send("survey is loaded");
-});
+function htmlRoutes(app) {
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/home.html'));
+  });
 
-// app.post("/api/add", function(req, res) {
-//   res.send("return");
-// });
+  app.get("/survey.html", function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/survey.html'));
+    // res.send("survey is loaded");
+  });
+
+  // app.post("/api/add", function(req, res) {
+  //   res.send("return");
+  // });
+
+}
+
+module.exports = htmlRoutes;
