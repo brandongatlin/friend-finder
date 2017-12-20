@@ -7,7 +7,6 @@ var app = express();
 
 //app.use(nosniff());
 
-
 var dirname = "localhost:";
 var PORT = 3000;
 

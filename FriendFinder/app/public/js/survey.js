@@ -54,12 +54,13 @@ $("#submit").on("click", function() {
   console.log(newUser);
   console.log(peeps);
 
-  //push new user data to array of users
-  peeps.push(newUser);
+
 
   $("#name-input").val("");
   $("#img-input").val("");
   $(".q").val("");
+
+  // $('#alert').modal({});
 
   $.post("/api/friends", newUser, function(data) {});
 

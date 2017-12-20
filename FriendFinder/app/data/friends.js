@@ -86,3 +86,5 @@ var peeps = [{
   }
 
 ];
+
+module.exports = peeps;
