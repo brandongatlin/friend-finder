@@ -22,12 +22,12 @@ function surveyLoad() {
   for (var i = 0; i < qList.length; i++) {
     questionId++;
     $("#surveyDiv").append("<div class='form-group'> <label for = 'exampleFormControlSelect1'><p> Question " + questionId + ": </p></label><p class = 'question-text'>" + qList[i] +
-      "</p> <select class = 'form-control q' id =" + "q" + questionId + "><option> 1 Nope! </option> <option> 2 </option> <option> 3 More or Less </option> <option> 4 </option> <option> 5 To the max! </option></select ></div>");
+      "</p> <select class = 'form-control q' id =" + "q" + questionId + "><option> 1 </option> <option> 2 </option> <option> 3 </option> <option> 4 </option> <option> 5 </option></select ></div>");
   } //end loop
 } //end surveyLoad
 
-// var name;
-// var pic;
+var name;
+var pic;
 
 var newUser;
 
@@ -51,17 +51,23 @@ $("#submit").on("click", function() {
     ]
   };
 
-  console.log(newUser);
-  console.log(peeps);
-
-
-
   $("#name-input").val("");
   $("#img-input").val("");
   $(".q").val("");
 
   // $('#alert').modal({});
 
-  $.post("/api/friends", newUser, function(data) {});
+  //grab current URL for post method
+  var currentURL = window.location.origin;
+
+  console.log(currentURL);
+  console.log(newUser);
+  // console.log(typeof newUser.scores[1]);
+
+  $.post(currentURL + "/api/friends", newUser, function(data) {
+    console.log(data);
+  }).done(function(data) {
+    console.log(data);
+  }); //end .done
 
 }); //end submit button on click event

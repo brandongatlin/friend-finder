@@ -1,5 +1,3 @@
-// var newUser = require("newUser");
-
 var peeps = [{
     "name": "Fry",
     "pic": "https://www.wired.com/images_blogs/underwire/2010/06/fry_660.jpg",
